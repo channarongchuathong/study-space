@@ -1,7 +1,7 @@
 
 function Navbar() {
     return (
-        <div className="bg-background">
+        <div className="bg-background border-b border-border">
             <div className="container mx-auto">
                 <div className="flex justify-between h-20 px-2 lg:px-10 items-center text-text text-md">
                     <div className="drawer lg:hidden w-10">
@@ -23,7 +23,7 @@ function Navbar() {
                         </div>
                     </div>
                     <div className="h-full">
-                        <img src="./images/logo.png" alt="logo" className="h-full w-auto p-5" />
+                        <img src="/images/logo.png" alt="logo" className="h-full w-auto p-5" />
                     </div>
                     <ul className="hidden lg:flex gap-8">
                         <li><a href="#">หน้าแรก</a></li>

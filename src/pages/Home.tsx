@@ -1,9 +1,27 @@
-import Course from "../components/Course";
+import CourseCard from "../components/CourseCard";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Search from "../components/Search";
+import { getCourses } from "../api/courseApi";
+import { useEffect, useState } from "react";
+import type { Course } from "../types/Course";
 
 function Home() {
+
+  const [courses, setCourses] = useState<Course[]>([])
+
+  useEffect(() => {
+
+    async function fetchCourses() {
+      const data = await getCourses()
+
+      setCourses(data)
+    }
+
+    fetchCourses()
+  }, [])
+
+
   return (
     <div className="bg-background">
       <Navbar />
@@ -28,48 +46,59 @@ function Home() {
         </div>
       </section>
       <Search></Search>
-      <Course></Course>
+      <div className="container mx-auto">
+        <div className="flex justify-between items-center mt-10">
+          <h1 className="text-text text-2xl">แนะนำสำหรับคุณ</h1>
+          <span className="text-primary">ดูทั้งหมด</span>
+        </div>
+        <div className="grid grid-cols-4 py-10 gap-10">
+          {courses.map((course) => (
+            <CourseCard key={course.id} course={course} />
+          ))}
+        </div>
+      </div>
+
       <section className="mb-10">
         <div className="container mx-auto">
           <div className="flex justify-between text-text border border-border rounded-xl p-10 divide-x divide-border bg-surface">
 
             <div className="flex justify-between px-8 flex-1 gap-3 items-center">
               <div className="w-16 h-16">
-                <img src="/images/icon/icon-1.png" alt="icon" className="h-full w-full object-contain"/>
+                <img src="/images/icon/icon-1.png" alt="icon" className="h-full w-full object-contain" />
               </div>
               <div>
                 <h1 className="font-semibold text-lg">เรียนได้ทุกที่ ทุกเวลา</h1>
-                <p className="text-muted">เรียนผ่านทุกอุปกรณ์<br/>ได้ทุกที่ที่คุณต้องการ</p>
+                <p className="text-muted">เรียนผ่านทุกอุปกรณ์<br />ได้ทุกที่ที่คุณต้องการ</p>
               </div>
             </div>
 
             <div className="flex justify-between px-8 flex-1 gap-3 items-center">
               <div className="w-16 h-16">
-                <img src="/images/icon/icon-2.png" alt="icon" className="h-full w-full object-contain"/>
+                <img src="/images/icon/icon-2.png" alt="icon" className="h-full w-full object-contain" />
               </div>
               <div>
                 <h1 className="font-semibold text-lg">ติดตามความก้าวหน้า</h1>
-                <p className="text-muted">ระบบติดตามการเรียนรู้<br/>ช่วยให้คุณพัฒนาต่อเนื่อง</p>
+                <p className="text-muted">ระบบติดตามการเรียนรู้<br />ช่วยให้คุณพัฒนาต่อเนื่อง</p>
               </div>
             </div>
 
-           <div className="flex justify-between px-8 flex-1 gap-3 items-center">
+            <div className="flex justify-between px-8 flex-1 gap-3 items-center">
               <div className="w-16 h-16">
-                <img src="/images/icon/icon-3.png" alt="icon" className="h-full w-full object-contain"/>
+                <img src="/images/icon/icon-3.png" alt="icon" className="h-full w-full object-contain" />
               </div>
               <div>
                 <h1 className="font-semibold text-lg">เรียนเป็นขั้น เป็นตอน</h1>
-                <p className="text-muted">เนื้อหาจัดเป็นบทเรียน<br/>เข้าใจง่ายและนำไปใช้ได้จริง</p>
+                <p className="text-muted">เนื้อหาจัดเป็นบทเรียน<br />เข้าใจง่ายและนำไปใช้ได้จริง</p>
               </div>
             </div>
 
-           <div className="flex justify-between px-8 flex-1 gap-3 items-center">
+            <div className="flex justify-between px-8 flex-1 gap-3 items-center">
               <div className="w-16 h-16">
-                <img src="/images/icon/icon-4.png" alt="icon" className="h-full w-full object-contain"/>
+                <img src="/images/icon/icon-4.png" alt="icon" className="h-full w-full object-contain" />
               </div>
               <div>
                 <h1 className="font-semibold text-lg">เรียนรู้จากผู้เชี่ยวชาญ</h1>
-                <p className="text-muted">คอร์สคุณภาพจากผู้สอนตัวจริง<br/>ในแต่ละสายงาน</p>
+                <p className="text-muted">คอร์สคุณภาพจากผู้สอนตัวจริง<br />ในแต่ละสายงาน</p>
               </div>
             </div>
 
