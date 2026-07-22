@@ -20,9 +20,9 @@ function Search({ value, onChange, onKeyDown, onSelectCategory, categories,categ
                     </svg>
                 </div>
                 <div>
-                    <div className="dropdown">
+                    <div className="dropdown w-auto">
                         <div tabIndex={0} role="button" className="h-10 flex items-center px-10 rounded-md border border-border text-text bg-surface cursor-pointer hover:bg-white/10">หมวดหมู่ :  {category === "All" ? "ทั้งหมด" : category}</div>
-                        <ul tabIndex={-1} className="dropdown-content menu bg-surface text-text rounded-box z-1 w-52 p-2 shadow-sm">
+                        <ul tabIndex={-1} className="dropdown-content menu bg-surface text-text rounded-box z-1 w-full p-2 shadow-sm">
                             <button onClick={() => onSelectCategory("All")} className="w-full menu cursor-pointer hover:bg-white/10">ทั้งหมด</button>
                             {categories.map((category) => (
                                 <button onClick={() => onSelectCategory(category)} className="w-full menu cursor-pointer hover:bg-white/10">{category}</button>
