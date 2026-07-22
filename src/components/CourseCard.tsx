@@ -1,11 +1,11 @@
-import type { Course as CourseCard } from "../types/Course"
+import type { Course} from "../types/Course"
 
 type CourseCardProps = {
-    course: CourseCard
+    course: Course
 }
 
 function CourseCard({course}: CourseCardProps) {
-    console.log(course)
+
     return (
 
         <div className="w-84 h-90 border rounded-xl overflow-hidden shadow border-border hover:scale-110 cursor-pointer transition-all">

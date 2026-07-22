@@ -21,6 +21,22 @@ function Home() {
     fetchCourses()
   }, [])
 
+  const [search, setSearch] = useState("")
+  const [inputValue, setInputValue] = useState("")
+  const [category, setCategory] = useState("All")
+
+  const filteredCourses = courses.filter((course) => {
+    return course.name.toLowerCase().includes(search.toLowerCase()) && (category === "All" || course.category === category)
+  })
+
+  const categories: string[] = []
+  courses.forEach((course) => {
+    if (!categories.includes(course.category)) {
+      categories.push(course.category)
+    }
+  })
+
+
 
   return (
     <div className="bg-background">
@@ -45,14 +61,28 @@ function Home() {
           </div>
         </div>
       </section>
-      <Search></Search>
+      <Search value={inputValue}
+        onChange={(event) => {
+          setInputValue(event.target.value)
+        }}
+        onKeyDown={(event) => {
+          if (event.key === "Enter") {
+            setSearch(inputValue)
+          }
+        }}
+        onSelectCategory={(category) => {
+          setCategory(category)
+        }}
+        categories={categories}
+        category={category}
+         />
       <div className="container mx-auto">
         <div className="flex justify-between items-center mt-10">
           <h1 className="text-text text-2xl">แนะนำสำหรับคุณ</h1>
           <span className="text-primary">ดูทั้งหมด</span>
         </div>
         <div className="grid grid-cols-4 py-10 gap-10">
-          {courses.map((course) => (
+          {filteredCourses.map((course) => (
             <CourseCard key={course.id} course={course} />
           ))}
         </div>
