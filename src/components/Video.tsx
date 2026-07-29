@@ -12,7 +12,7 @@ function Video({ course, currentLecture, onComplete, isCompleted }: VideoProp) {
 
     return (
         <div className="mx-5 rounded-xl overflow-hidden border border-border bg-surface">
-            <iframe className="w-full aspect-video" src="https://www.youtube.com/embed/gNg_pKbH0os?si=lEktB6IbkTUwKA3q" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            {/* <iframe className="w-full aspect-video" src="https://www.youtube.com/embed/gNg_pKbH0os?si=lEktB6IbkTUwKA3q" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> */}
             <div className="flex flex-col gap-5 p-5">
                 <button onClick={onComplete} className="text-text rounded-lg bg-primary border-border px-3 py-2 hover:cursor-pointer hover:bg-primary/80">{isCompleted ? "✓ เรียนจบแล้ว" : "ทำเครื่องหมายว่าเรียนจบ"}</button>
                 <h1 className="text-2xl lg:text-4xl font-bold">{currentLecture.title}</h1>
