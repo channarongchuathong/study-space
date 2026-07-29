@@ -36,7 +36,7 @@ function MyCourses() {
                     </div>
                     <div className="px-5">
                         {myCourses.length === 0 ? (
-                            <div className="w-full h-80 flex flex-col gap-5 justify-center text-lg border border-border text-center rounded-xl">
+                            <div className="mt-5 p-5 w-full h-80 flex flex-col gap-5 justify-center text-lg border border-border text-center rounded-xl">
                                 <h1>ยังไม่มีคอร์สของคุณ</h1>
                                 <p>เลือกคอร์สแล้วกด "เริ่มเรียน" คอร์สจะปรากฏที่นี่</p>
                                 <Link to={"/"}>
@@ -52,9 +52,7 @@ function MyCourses() {
                                     return <MyCourseCard key={course.id} course={course} progress={progress}></MyCourseCard>
                                 })}
                             </div>
-
                         )}
-
                     </div>
                 </section>
             </div>
