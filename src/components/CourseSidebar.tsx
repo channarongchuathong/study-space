@@ -35,7 +35,7 @@ function CourseSidebar({ course, lectureId }: CourseSidebarProp) {
         </div>
       </div>
       <div className="my-6">
-        <div className="h-1 lg:h-3 rounded-full bg-slate-700">
+        <div className="h-2 lg:h-3 rounded-full bg-slate-700">
           <div
             className="h-full rounded-full bg-primary transition-all duration-500"
             style={{ width: `${progress}%` }}

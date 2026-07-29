@@ -91,7 +91,7 @@ function Home() {
           }}
         />
         <div className="container mx-auto">
-          <div className="flex justify-between items-center mt-10 px-5">
+          <div className="flex items-center mt-10 px-5">
             <h1 id="courses" className="text-text text-2xl scroll-mt-30">คอร์สทั้งหมด</h1>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-5 py-10 gap-10 mx-5">

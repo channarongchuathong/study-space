@@ -30,7 +30,7 @@ function Navbar() {
                     </div>
                     <ul className="relative group hidden lg:flex gap-8">
                         <li className="text-text hover:text-primary transition-all duration-300"><Link to="/">หน้าแรก</Link></li>
-                        <li className="text-text hover:text-primary transition-all duration-300">คอร์สของฉัน</li>
+                        <li className="text-text hover:text-primary transition-all duration-300"><Link to={"/my-courses"}>คอร์สของฉัน</Link></li>
                         <li className="text-text hover:text-primary transition-all duration-300"><Link to={"/about"}>เกี่ยวกับเรา</Link></li>
 
                     </ul>
