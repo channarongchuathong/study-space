@@ -4,7 +4,6 @@ export type Course = {
   description: string;
   category: string;
   image: string;
-  totalDuration: string;
   coursesDtl: CourseDetail[];
 }
 
