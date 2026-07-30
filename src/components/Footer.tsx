@@ -2,7 +2,7 @@
 
 function Footer() {
     return (
-        <div className='bg-surface border border-border'>
+        <div className='bg-surface border-t border-border'>
             <div className='container mx-auto'>
                 <footer className="footer sm:footer-horizontal bg-base-200 text-text p-10">
                     <aside>

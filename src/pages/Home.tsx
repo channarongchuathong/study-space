@@ -6,6 +6,7 @@ import { getCourses } from "../api/courseApi";
 import { useEffect, useState } from "react";
 import type { Course } from "../types/Course";
 import { getCategories, getCoursesByCategory } from "../api/categoriesApi";
+import { Link } from "react-router";
 
 function Home() {
 
@@ -58,7 +59,7 @@ function Home() {
         <div className="relative z-10 container mx-auto">
           <div className="h-100 lg:h-150 px-5">
             <div className="h-full flex flex-col justify-center gap-5">
-              <h1 className="tex-text text-4xl text-text font-bold">
+              <h1 className="tex-text text-4xl text-text font-bold flex flex-col gap-2">
                 พื้นที่สำหรับการเรียนรู้
                 <br />
                 <span className="text-primary">
@@ -67,7 +68,7 @@ function Home() {
               </h1>
               <p className="text-muted">เรียนได้ทุกที่ ทุกเวลา กับหลักสูตรคุณภาพ<br />จากผู้เชี่ยวชาญในอุตสาหกรรม</p>
               <div className="flex gap-3 lg:gap-5">
-                <button className="text-text text-xs lg:text-base rounded-lg bg-primary border-border px-3 py-2 hover:cursor-pointer hover:bg-primary/80">เริ่มเรียนรู้เลย</button>
+                <Link to={"/my-courses"}><button className="text-text text-xs lg:text-base rounded-lg bg-primary border-border px-3 py-2 hover:cursor-pointer hover:bg-primary/80">เริ่มเรียนรู้เลย</button></Link>
                 <a href="#courses"><button className="text-text text-xs lg:text-base rounded-lg border border-border px-3 py-2 hover:cursor-pointer hover:bg-white/10">ดูหลักสูตรทั้งหมด</button></a>
               </div>
             </div>
