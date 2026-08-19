@@ -20,13 +20,13 @@ StudySpace คือเว็บไซต์ตัวอย่างสำหร
 
 ![Home](./screenshots/home.jpg)
 
-### ℹ️ About
-
-![About](./screenshots/about.jpg)
-
 ### 📚 Course Detail
 
 ![Course Detail](./screenshots/course-detail.jpg)
+
+### ℹ️ About
+
+![About](./screenshots/about.jpg)
 
 ## เทคโนโลยีที่ใช้
 
