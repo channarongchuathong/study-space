@@ -14,6 +14,20 @@ StudySpace คือเว็บไซต์ตัวอย่างสำหร
 
 > ความคืบหน้าการเรียนบันทึกใน `localStorage` ของเบราว์เซอร์ จึงเป็นข้อมูลเฉพาะอุปกรณ์และเบราว์เซอร์ที่ใช้งาน
 
+## Screenshots
+
+### 🏠 Home
+
+![Home](./screenshots/home.png)
+
+### ℹ️ About
+
+![About](./screenshots/about.png)
+
+### 📚 Course Detail
+
+![Course Detail](./screenshots/course-detail.png)
+
 ## เทคโนโลยีที่ใช้
 
 - React
