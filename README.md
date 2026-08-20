@@ -14,6 +14,12 @@ StudySpace คือเว็บไซต์ตัวอย่างสำหร
 
 > ความคืบหน้าการเรียนบันทึกใน `localStorage` ของเบราว์เซอร์ จึงเป็นข้อมูลเฉพาะอุปกรณ์และเบราว์เซอร์ที่ใช้งาน
 
+## 🎥 Demo Video
+
+Watch the project demo on YouTube:
+
+▶️ https://youtu.be/ab8FpamY-7Y?si=v-aLZ4Boyo5TVmd7
+
 ## Screenshots
 
 ### 🏠 Home
