@@ -16,7 +16,7 @@ StudySpace คือเว็บไซต์ตัวอย่างสำหร
 
 ## 🎥 Demo Video
 
-Watch the project demo on YouTube:
+รับชมวิดีโอการทำงานของเว็บไซต์ได้ที่ Youtube:
 
 ▶️ https://youtu.be/ab8FpamY-7Y?si=v-aLZ4Boyo5TVmd7
 
